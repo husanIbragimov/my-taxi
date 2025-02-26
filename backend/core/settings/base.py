@@ -25,12 +25,12 @@ SECRET_KEY = 'django-insecure-5h02_u1i5#-yojj#_1l@68-ikpbibtk8r(pacvx5kb$q(gtyv%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +38,24 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+THIRD_PARTY_APPS = [
+    'ckeditor',
+    'corsheaders',
+    'rest_framework',
+]
+
+LOCAL_APPS = [
+    'apps.ad',
+    'apps.common',
+    'apps.group',
+    'apps.order',
+    'apps.user',
+]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+
+AUTH_USER_MODEL = 'user.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
