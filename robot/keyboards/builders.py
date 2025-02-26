@@ -31,3 +31,8 @@ def check_channel_sub(chanells: list):
     builder = InlineKeyboardBuilder()
     [builder.button(text=name, url=link) for name, link in chanells]
     return builder.as_markup()
+
+def contact_keyboard():
+    builder = ReplyKeyboardBuilder()
+    builder.button(text="Kontakt ma'lumotlar", request_contact=True)
+    return builder.as_markup(resize_keyboard=True, one_time_keyboard=True)

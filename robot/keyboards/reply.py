@@ -24,6 +24,27 @@ main = ReplyKeyboardMarkup(
 
 )
 
+is_driver = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="Haydovchi"),
+            KeyboardButton(text="Mijoz")
+        ]
+    ],
+    resize_keyboard=True,
+    one_time_keyboard=True
+)
+
+gender_btn = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="Erkak"),
+            KeyboardButton(text="Ayol")
+        ]
+    ],
+    resize_keyboard=True,
+    one_time_keyboard=True
+)
 
 
 maxsus_btn = ReplyKeyboardMarkup(

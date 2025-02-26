@@ -10,15 +10,29 @@ class Form(StatesGroup):
 
 
 class UserGroup(StatesGroup):
-    name = State()
-    phone = State()
+    first_name = State()
+    last_name = State()
+    phone_number = State()
+    gender = State()
+    photo = State()
     is_driver = State()
-    birthdate = State()
 
 
 class DriverGroup(UserGroup):
-    car = State()
-    car_color = State()
-    car_photo = State()
-    car_number = State()
     experience = State()
+    license_number = State()
+    license_expiry_date = State()
+    license_image = State()
+    make = State()
+    model = State()
+    car_color = State()
+    car_year = State()
+    car_photo = State()
+
+
+class OrderGroup(StatesGroup):
+    content = State()
+    price = State()
+    when = State()
+    where = State()
+    location = State()

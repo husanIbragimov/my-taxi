@@ -16,8 +16,8 @@ class Vehicle(models.Model):
         ('#FFA500', 'Orange'),
     ]
     plate_number = models.CharField(max_length=20, verbose_name="Plate Number", null=True, blank=True)
-    make = models.CharField(max_length=50, verbose_name="Brand")
-    model = models.CharField(max_length=50, verbose_name="Model")
+    make = models.CharField(max_length=50, verbose_name="Brand") # for example: Toyota, Honda, etc.
+    model = models.CharField(max_length=50, verbose_name="Model") # for example: Corolla, Camry, etc.
     year = models.IntegerField()
     color = ColorField(default='#FFFFFF', choices=COLOR_PALETTE)
     image = models.ImageField(upload_to="vehicle/")
@@ -33,6 +33,7 @@ class Vehicle(models.Model):
 
 class Driver(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, to_field="telegram_id")
+    experience = models.IntegerField(null=True, blank=True)
     license_number = models.CharField(max_length=20)
     license_expiry_date = models.DateField(null=True, blank=True)
     license_image = models.ImageField(upload_to="driver/license/")
