@@ -39,6 +39,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'verbose_name': 'Ad Image',
+                'db_table': 'ad_images',
                 'verbose_name_plural': 'Ad Images',
                 'ordering': ['id'],
             },

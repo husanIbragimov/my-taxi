@@ -25,5 +25,6 @@ class AdImages(models.Model):
 
     class Meta:
         ordering = ["id"]
+        db_table = "ad_images"
         verbose_name = "Ad Image"
         verbose_name_plural = "Ad Images"
