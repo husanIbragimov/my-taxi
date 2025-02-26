@@ -11,4 +11,7 @@ router = Router()
 router.message.filter(IsPrivateChat())
 
 
-# @router.message(Command('profile'))
+@router.message(Command('register'))
+async def register(message: Message, state: FSMContext):
+    await state.set_state(UserGroup.name)
+    await message.answer('Ismingizni kiriting: ', reply_markup=builders.profile(message.from_user.full_name))
