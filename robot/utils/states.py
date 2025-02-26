@@ -12,7 +12,7 @@ class Form(StatesGroup):
 class UserGroup(StatesGroup):
     name = State()
     phone = State()
-    is_user = State()
+    is_driver = State()
     birthdate = State()
 
 
