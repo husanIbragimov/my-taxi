@@ -2,7 +2,7 @@ import json
 from django.contrib import admin
 
 from apps.common.models import Country
-from .models import User
+from .models import User, Driver, Color
 
 
 @admin.register(User)
@@ -35,3 +35,11 @@ class UserAdmin(admin.ModelAdmin):
         Country.objects.bulk_create(districts)
 
         print("✅ Barcha viloyatlar va tumanlar yuklandi!")
+
+
+@admin.register(Driver)
+class DriverAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Color)

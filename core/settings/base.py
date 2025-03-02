@@ -44,6 +44,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'ckeditor',
+    'colorfield',
     'corsheaders',
     'rest_framework',
 ]

@@ -33,9 +33,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Driver',
             fields=[
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL, to_field='telegram_id')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
                 ('license_number', models.CharField(max_length=20)),
-                ('license_expiry_date', models.DateField(blank=True, null=True)),
+                ('license_expiry_date', models.CharField(blank=True, max_length=20, null=True)),
                 ('license_image', models.ImageField(upload_to='driver/license/')),
                 ('is_active', models.BooleanField(default=True)),
                 ('vehicle', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='drivers', to='user.vehicle')),
