@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Toshkent",
+        "districts": ["Bektemir", "Mirobod", "Mirzo Ulug‘bek", "Olmazor", "Sirg‘ali", "Uchtepa", "Chilonzor", "Shayxontohur", "Yunusobod", "Yakkasaroy"]
+    },
+    {
+        "name": "Toshkent viloyati",
+        "districts": ["Bekobod", "Bo‘ka", "Bo‘stonliq", "Chinoz", "Qibray", "Ohangaron", "Olmaliq", "Parkent", "Piskent", "Quyichirchiq", "O‘rta Chirchiq", "Yangiyo‘l", "Zangiota"]
+    },
+    {
+        "name": "Andijon",
+        "districts": ["Asaka", "Baliqchi", "Bo‘ston", "Jalaquduq", "Izboskan", "Marhamat", "Oltinko‘l", "Paxtaobod", "Shahrixon", "Xo‘jaobod", "Qo‘rg‘ontepa"]
+    },
+    {
+        "name": "Buxoro",
+        "districts": ["G‘ijduvon", "Jondor", "Kogon", "Qorako‘l", "Qorovulbozor", "Olot", "Peshku", "Romitan", "Shofirkon", "Vobkent"]
+    },
+    {
+        "name": "Farg‘ona",
+        "districts": ["Bag‘dod", "Beshariq", "Buvayda", "Dang‘ara", "Furqat", "Qo‘qon", "Quva", "Rishton", "So‘x", "Toshloq", "Uchko‘prik", "Yozyovon"]
+    },
+    {
+        "name": "Jizzax",
+        "districts": ["Arnasoy", "Baxmal", "Do‘stlik", "Forish", "G‘allaorol", "Mirzacho‘l", "Paxtakor", "Yangiobod", "Zafarobod", "Zomin", "Sharof Rashidov"]
+    },
+    {
+        "name": "Xorazm",
+        "districts": ["Bog‘ot", "Gurlan", "Xonqa", "Xiva", "Qo‘shko‘pir", "Shovot", "Urganch", "Yangibozor", "Yangiariq", "Tuproqqala"]
+    },
+    {
+        "name": "Namangan",
+        "districts": ["Chortoq", "Chust", "Kosonsoy", "Mingbuloq", "Norin", "Pop", "To‘raqo‘rg‘on", "Uchqo‘rg‘on", "Uychi", "Yangiqo‘rg‘on"]
+    },
+    {
+        "name": "Navoiy",
+        "districts": ["Konimex", "Karmana", "Navbahor", "Nurota", "Qiziltepa", "Tomdi", "Uchquduq", "Xatirchi"]
+    },
+    {
+        "name": "Qashqadaryo",
+        "districts": ["Chiroqchi", "Dehqonobod", "G‘uzor", "Qamashi", "Qarshi", "Kasbi", "Kitob", "Mirishkor", "Muborak", "Nishon", "Shahrisabz", "Yakkabog‘"]
+    },
+    {
+        "name": "Samarqand",
+        "districts": ["Bulung‘ur", "Ishtixon", "Jomboy", "Kattaqo‘rg‘on", "Qo‘shrabot", "Narpay", "Nurobod", "Oqdaryo", "Paxtachi", "Pastdarg‘om", "Payariq", "Toyloq", "Urgut"]
+    },
+    {
+        "name": "Sirdaryo",
+        "districts": ["Boyovut", "Guliston", "Xovos", "Mirzaobod", "Oqoltin", "Sayxunobod", "Sardoba", "Shirin", "Yangier"]
+    },
+    {
+        "name": "Surxondaryo",
+        "districts": ["Angor", "Bandixon", "Boysun", "Denov", "Jarqo‘rg‘on", "Muzrabot", "Oltinsoy", "Qiziriq", "Sariosiyo", "Sherobod", "Sho‘rchi", "Termiz", "Uzun"]
+    },
+    {
+        "name": "Qoraqalpog‘iston",
+        "districts": ["Amudaryo", "Beruniy", "Chimboy", "Ellikqal‘a", "Kegeyli", "Mo‘ynoq", "Nukus", "Qonliko‘l", "Qo‘ng‘irot", "Shumanay", "Taxtako‘pir", "To‘rtko‘l", "Xo‘jayli"]
+    }
+]
