@@ -43,7 +43,7 @@ class Order(BaseModel):
 
     content = RichTextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    when = models.DateTimeField(null=True, blank=True)
+    when = models.CharField(max_length=15, null=True, blank=True)
 
     status = models.IntegerField(
         choices=StatusChoice.choices,

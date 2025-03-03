@@ -7,6 +7,7 @@ class Group(BaseModel):
     group_id = models.BigIntegerField(unique=True)
     title = models.CharField(max_length=255, null=True, blank=True)
     parent = models.ForeignKey("self", on_delete=models.CASCADE, null=True, blank=True, related_name="children")
+    district = models.ForeignKey("common.Country", on_delete=models.SET_NULL, null=True, blank=True, related_name="groups")
     username = models.CharField(max_length=255, null=True, blank=True, unique=True)
     invite_link = models.CharField(max_length=255, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
