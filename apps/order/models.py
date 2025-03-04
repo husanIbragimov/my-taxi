@@ -22,7 +22,6 @@ class Order(BaseModel):
     user = models.ForeignKey(
         "user.User",
         on_delete=models.CASCADE,
-        to_field="telegram_id",
         related_name="orders"
     )
     driver = models.ForeignKey(
@@ -42,7 +41,7 @@ class Order(BaseModel):
     to_where = models.CharField(max_length=255, null=True, blank=True)
 
     content = RichTextField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    price = models.DecimalField(max_digits=10, decimal_places=2, null=True)  # 10 000 000.00
     when = models.CharField(max_length=15, null=True, blank=True)
 
     status = models.IntegerField(

@@ -1,3 +1,5 @@
 from django.contrib import admin
+from apps.group.models import Group, Channel
 
-# Register your models here.
+admin.site.register(Group)
+admin.site.register(Channel)
