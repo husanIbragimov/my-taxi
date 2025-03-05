@@ -7,7 +7,7 @@ from apps.common.models import BaseModel
 class Product(BaseModel):
     name = models.CharField(max_length=255)
     description = RichTextField(null=True, blank=True)
-    district = models.ForeignKey('common.District', on_delete=models.CASCADE, related_name='products')
+    district = models.ForeignKey('common.Country', on_delete=models.CASCADE, related_name='products')
 
     class Meta:
         db_table = 'products'
