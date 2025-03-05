@@ -35,12 +35,12 @@ class Order(BaseModel):
     longitude = models.FloatField(null=True, blank=True)
     latitude = models.FloatField(null=True, blank=True)
 
-    address = models.CharField(max_length=100, null=True, blank=True)
+    address = models.TextField(null=True, blank=True)
 
     from_where = models.CharField(max_length=255, null=True, blank=True)
     to_where = models.CharField(max_length=255, null=True, blank=True)
 
-    content = RichTextField()
+    content = RichTextField(null=True, blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2, null=True)  # 10 000 000.00
     when = models.CharField(max_length=15, null=True, blank=True)
 
