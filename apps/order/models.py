@@ -22,6 +22,7 @@ class Order(BaseModel):
     user = models.ForeignKey(
         "user.User",
         on_delete=models.CASCADE,
+        to_field="telegram_id",
         related_name="orders"
     )
     driver = models.ForeignKey(
