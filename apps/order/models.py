@@ -36,6 +36,13 @@ class Order(BaseModel):
     longitude = models.FloatField(null=True, blank=True)
     latitude = models.FloatField(null=True, blank=True)
 
+    district = models.ForeignKey(
+        "common.Country",
+        on_delete=models.CASCADE,
+        null=True, blank=True,
+        limit_choices_to={"parent__isnull": False},
+        related_name="orders"
+    )
     address = models.TextField(null=True, blank=True)
 
     from_where = models.CharField(max_length=255, null=True, blank=True)
