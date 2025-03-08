@@ -27,17 +27,18 @@ class Color(models.Model):
 class Driver(models.Model):
     user = models.OneToOneField(
         to=User,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        to_field="telegram_id",
     )
     experience = models.IntegerField(null=True, blank=True)
     license_number = models.CharField(max_length=20, null=True, blank=True)
     license_expiry_date = models.CharField(max_length=20, null=True, blank=True)
-    license_image = models.ImageField(upload_to="driver/license/", null=True, blank=True)
+    license_image = models.ImageField(upload_to="drivers/licenses/", null=True, blank=True)
     plate_number = models.CharField(max_length=20, verbose_name="Plate Number", null=True, blank=True)
     model = models.CharField(max_length=50, verbose_name="Model", null=True)  # for example: Corolla, Camry, etc.
     year = models.IntegerField(default=date.today().year)
     color = models.ForeignKey(Color, on_delete=models.SET_NULL, related_name="vehicles", null=True)
-    image = models.ImageField(upload_to="vehicle/", null=True, blank=True)
+    image = models.ImageField(upload_to="drivers/vehicle/", null=True, blank=True)
 
     class Meta:
         db_table = "drivers"
