@@ -94,8 +94,8 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-GDAL_LIBRARY_PATH = env.str('GDAL_LIBRARY_PATH')
-GEOS_LIBRARY_PATH = env.str('GEOS_LIBRARY_PATH')
+# GDAL_LIBRARY_PATH = env.str('GDAL_LIBRARY_PATH')
+# GEOS_LIBRARY_PATH = env.str('GEOS_LIBRARY_PATH')
 
 DATABASES = {
     'default': {
