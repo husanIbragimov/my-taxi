@@ -7,7 +7,7 @@ from .models import User, Driver, Color
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ["id", "username", "telegram_id"]
+    list_display = ["id", "nickname", "username", "telegram_id"]
     readonly_fields = ["id", "last_login", "date_joined"]
     actions = ["load_uzb_regions"]
 
