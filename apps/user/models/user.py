@@ -15,6 +15,7 @@ class User(AbstractUser):
     nickname = models.CharField(max_length=255, null=True)
     telegram_id = models.BigIntegerField(unique=True, db_index=True)
     email = models.EmailField(null=True, blank=True)
+    language_code = models.CharField(max_length=2, default="uz")
     phone_number = models.CharField(
         max_length=20,
         db_index=True,
