@@ -10,6 +10,7 @@ from .models import User, Driver, Color
 
 admin.site.unregister(Group)
 
+
 @admin.register(LogEntry)
 class LogEntryAdmin(admin.ModelAdmin):
     list_display = ("id", "user", "object_repr", "action_time")
