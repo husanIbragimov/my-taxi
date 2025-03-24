@@ -14,7 +14,7 @@ class UserAdmin(UserAdmin):
     actions = ["load_uzb_regions"]
     fieldsets = (
         (None, {"fields": ("username", "password")}),
-        ("Personal info", {"fields": ("full_name", "nickname", "email")}),
+        ("Personal info", {"fields": ("full_name", "nickname", "email", "phone_number")}),
         (
             "Permissions",
             {
