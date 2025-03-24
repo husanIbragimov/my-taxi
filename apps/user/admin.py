@@ -1,9 +1,24 @@
 import json
+
 from django.contrib import admin
+from django.contrib.admin.models import LogEntry
 from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import Group
 
 from apps.common.models import Country
 from .models import User, Driver, Color
+
+admin.site.unregister(Group)
+
+@admin.register(LogEntry)
+class LogEntryAdmin(admin.ModelAdmin):
+    list_display = ("id", "user", "object_repr", "action_time")
+    readonly_fields = (
+        "id", "user", "content_type",
+        "object_id", "object_repr",
+        "action_flag", "change_message",
+        "action_time"
+    )
 
 
 @admin.register(User)
@@ -23,14 +38,11 @@ class UserAdmin(UserAdmin):
                     "is_active",
                     "is_staff",
                     "is_superuser",
-                    "groups",
-                    "user_permissions",
                 ),
             },
         ),
         ("Important dates", {"fields": ("last_login", "date_joined")}),
     )
-
 
     def load_uzb_regions(self, request, queryset=None):
         Country.objects.all().delete()
