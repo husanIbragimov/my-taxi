@@ -10,8 +10,8 @@ class User(AbstractUser):
     )
     first_name = None
     last_name = None
-    full_name = models.CharField(max_length=255, null=True)
-    password = models.CharField(verbose_name="password", max_length=128, null=True)
+    full_name = models.CharField(max_length=255, null=True, blank=True)
+    password = models.CharField(verbose_name="password", max_length=128, null=True, blank=True)
     nickname = models.CharField(max_length=255, null=True)
     telegram_id = models.BigIntegerField(unique=True, db_index=True)
     email = models.EmailField(null=True, blank=True)

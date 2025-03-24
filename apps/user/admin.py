@@ -1,15 +1,36 @@
 import json
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
 
 from apps.common.models import Country
 from .models import User, Driver, Color
 
 
 @admin.register(User)
-class UserAdmin(admin.ModelAdmin):
-    list_display = ["id", "nickname", "username", "telegram_id", "is_driver"]
+class UserAdmin(UserAdmin):
+    list_display = ["id", "nickname", "username", "telegram_id", "phone_number", "is_driver"]
     readonly_fields = ["id", "last_login", "date_joined"]
+    search_fields = ["username"]
     actions = ["load_uzb_regions"]
+    fieldsets = (
+        (None, {"fields": ("username", "password")}),
+        ("Personal info", {"fields": ("full_name", "nickname", "email")}),
+        (
+            "Permissions",
+            {
+                "fields": (
+                    "is_driver",
+                    "is_active",
+                    "is_staff",
+                    "is_superuser",
+                    "groups",
+                    "user_permissions",
+                ),
+            },
+        ),
+        ("Important dates", {"fields": ("last_login", "date_joined")}),
+    )
+
 
     def load_uzb_regions(self, request, queryset=None):
         Country.objects.all().delete()
