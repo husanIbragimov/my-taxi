@@ -26,6 +26,7 @@ class LogEntryAdmin(admin.ModelAdmin):
 class UserAdmin(UserAdmin):
     list_display = ["id", "username", "nickname", "telegram_id", "phone_number", "is_driver"]
     list_display_links = ["id", "username"]
+    list_editable = ["phone_number"]
     readonly_fields = ["id", "last_login", "date_joined"]
     search_fields = ["username"]
     actions = ["load_uzb_regions"]
