@@ -8,9 +8,9 @@ class User(AbstractUser):
         ('male', 'Male'),
         ('female', 'Female')
     )
-
-    first_name = models.CharField(max_length=150, blank=True, null=True)
-    last_name = models.CharField(max_length=150, blank=True, null=True)
+    first_name = None
+    last_name = None
+    full_name = models.CharField(max_length=255, null=True)
     password = models.CharField(verbose_name="password", max_length=128, null=True)
     nickname = models.CharField(max_length=255, null=True)
     telegram_id = models.BigIntegerField(unique=True, db_index=True)
