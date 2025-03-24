@@ -46,6 +46,15 @@ class UserAdmin(UserAdmin):
         ),
         ("Important dates", {"fields": ("last_login", "date_joined")}),
     )
+    add_fieldsets = (
+        (
+            None,
+            {
+                "classes": ("wide",),
+                "fields": ("username", "telegram_id", "usable_password", "password1", "password2"),
+            },
+        ),
+    )
 
     def load_uzb_regions(self, request, queryset=None):
         Country.objects.all().delete()
