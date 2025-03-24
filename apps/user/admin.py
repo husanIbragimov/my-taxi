@@ -24,7 +24,8 @@ class LogEntryAdmin(admin.ModelAdmin):
 
 @admin.register(User)
 class UserAdmin(UserAdmin):
-    list_display = ["id", "nickname", "username", "telegram_id", "phone_number", "is_driver"]
+    list_display = ["id", "username", "nickname", "telegram_id", "phone_number", "is_driver"]
+    list_display_links = ["id", "username"]
     readonly_fields = ["id", "last_login", "date_joined"]
     search_fields = ["username"]
     actions = ["load_uzb_regions"]
