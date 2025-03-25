@@ -49,7 +49,7 @@ class User(AbstractUser):
         verbose_name_plural = "Users"
 
     def __str__(self):
-        return f"{self.username}"
+        return f"{self.username} | {self.nickname}"
 
     def age(self):
         return date.today().year - self.birth_year

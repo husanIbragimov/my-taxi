@@ -49,7 +49,7 @@ class Order(BaseModel):
     to_where = models.CharField(max_length=255, null=True, blank=True)
 
     content = RichTextField(null=True, blank=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2, null=True)  # 10 000 000.00
+    json_data = models.JSONField(null=True, blank=True)
     when = models.CharField(max_length=15, null=True, blank=True)
 
     status = models.IntegerField(
