@@ -32,7 +32,7 @@ class UserAdmin(UserAdmin):
     actions = ["load_uzb_regions"]
     fieldsets = (
         (None, {"fields": ("username", "telegram_id", "password")}),
-        ("Personal info", {"fields": ("full_name", "nickname", "email", "phone_number")}),
+        ("Personal info", {"fields": ("full_name", "nickname", "email", "phone_number", "district")}),
         (
             "Permissions",
             {
